@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Firestore</string>
+    <string name="surname">Surname</string>
+    <string name="name">name</string>
+    <string name="age">age</string>
+    <string name="save_database">Save Database</string>
+</resources>
