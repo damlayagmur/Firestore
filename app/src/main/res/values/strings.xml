@@ -4,4 +4,5 @@
     <string name="name">name</string>
     <string name="age">age</string>
     <string name="save_database">Save Database</string>
+    <string name="retrieve_database">Retrieve Data</string>
 </resources>
