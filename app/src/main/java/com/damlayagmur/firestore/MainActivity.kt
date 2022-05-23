@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var nameEt: EditText
     lateinit var surnameEt: EditText
     lateinit var ageEt: EditText
+    lateinit var fromEt: EditText
+    lateinit var toEt: EditText
     lateinit var personTv: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         surnameEt = findViewById(R.id.surname)
         ageEt = findViewById(R.id.age)
         personTv = findViewById(R.id.personTv)
+        fromEt = findViewById(R.id.from)
+        toEt = findViewById(R.id.to)
 
         saveData.setOnClickListener {
             val name = nameEt.text.toString()
@@ -64,8 +68,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun retrievePerson() = CoroutineScope(Dispatchers.IO).launch {
+        val from = fromEt.text.toString().toInt()
+        val to = toEt.text.toString().toInt()
         try {
-            val querySnapshot = personCollectionRef.get().await()
+            val querySnapshot = personCollectionRef
+                .whereGreaterThan("age", from)
+                .whereLessThan("age", to)
+                .orderBy("age")
+                .get()
+                .await()
+
             val sb = StringBuilder()
             for (document in querySnapshot.documents) {
                 val person = document.toObject<Person>()

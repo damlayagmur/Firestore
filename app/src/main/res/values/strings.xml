@@ -5,4 +5,6 @@
     <string name="age">age</string>
     <string name="save_database">Save Database</string>
     <string name="retrieve_database">Retrieve Data</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
 </resources>

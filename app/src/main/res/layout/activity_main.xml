@@ -34,15 +34,36 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/save_database" />
+
     <Button
         android:id="@+id/retrieveData"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/retrieve_database" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/from"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/from"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/to"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/to" />
+    </LinearLayout>
+
+
     <TextView
         android:id="@+id/personTv"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
