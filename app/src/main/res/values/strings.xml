@@ -7,4 +7,9 @@
     <string name="retrieve_database">Retrieve Data</string>
     <string name="from">from</string>
     <string name="to">to</string>
+    <string name="new_first_name">New First Name</string>
+    <string name="new_last_name">New Last Name</string>
+    <string name="new_age">New Age</string>
+    <string name="save_to_database">Save to database</string>
+    <string name="update_person">Update Person</string>
 </resources>
